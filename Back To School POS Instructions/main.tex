@@ -1,47 +1,44 @@
+%\title{Processing BTS Booklists Through the POS System}
 \documentclass[a4paper, 12pt]{article}
-\usepackage{graphicx, subcaption, amsmath, xcolor, pdfpages, geometry, fontspec, titlesec, titling}
+\usepackage{graphicx, subcaption, amsmath, xcolor, geometry, fontspec, atbegshi}
 \geometry{margin=1.0in}
 \usepackage[os=win]{menukeys}
-\renewcommand{\thesection}{\hspace*{-1.0em}}
-\renewcommand{\thesubsection}{\arabic{subsection}}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
 \newfontfamily\headingfont{Gill-Sans-MT-Condensed}[
     Path = ./fonts/,
     Extension = .TTF,
     UprightFont=*,
-    Scale = 2
+    Scale = 3
 ]
-\renewcommand{\maketitlehooka}{\headingfont}
-
-\title{Processing BTS Booklists Through the POS System}
-\preauthor{}
-\postauthor{}
-\author{}
-\predate{}
-\postdate{}
-\date{}
+\let\Huge\headingfont
 
 \begin{document}
+\begin{titlepage}
+	\begin{minipage}[t]{1\columnwidth}
+		\begin{flushright}
+       	\vspace{-0.6in}
+       	\includegraphics[width=0.3\textwidth]{MonextraNew.png}
+			\vspace{0.5in}
+		\par\end{flushright}
+	\end{minipage}
 
-\begin{minipage}[t]{1\columnwidth}%
-    \begin{flushright}
-        \vspace{-0.6in}
-        \includegraphics[width=0.3\textwidth]{MonextraNew.png}
-        \vspace{0.5in}
-    \par\end{flushright}%
-\end{minipage}
-{\let\newpage\relax\maketitle}
+	\begin{center}
+		{\Huge Processing BTS Booklists Through the POS System}
+	\end{center}
+	\vspace{2em}
+	\noindent
+	\textbf{Created:} January 5, 2024
+	\hfill
+	\textbf{Updated:} \today
+	\\\\\indent
+	Following are the steps required to process a BTS booklist that has been 	made up by a staff member when the customer is not present. If the 	customer is present while the booklist is being picked then these steps 	are not neccessary.
+	
+	\tableofcontents
+\end{titlepage}
 
-\noindent
-\textbf{Created:} January 5, 2024
-\hfill
-\textbf{Updated:} \today
-\\\\\indent
-Following are the steps required to process a BTS booklist that has been made up by a staff member when the customer is not present. If the customer is present while the booklist is being picked then these steps are not neccessary.
-
-\tableofcontents
-
-\newpage
-\section{Creating The Customer Account}
+%\newpage
+\section{Creating the Customer Account}
 Before ringing up booklist items, you must first create an account for the customer if one does not already exist.
 
 \begin{enumerate}
@@ -74,7 +71,7 @@ Once you have picked all of the items in the book list, you must ring them up to
         \centering
         \includegraphics[width=0.5\linewidth]{images/customerlookup.png}
     \end{figure}
-    \item Type in the first three letters of the customers last name and use the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys to select the correct customer account and press \keys{\enter}. A number will be automatically added to the end of the code.
+    \item Type in the first three letters of the customers last name and use the \keys{\arrowkeyup} and \keys{\arrowkeydown} keys to select the correct customer account and press \keys{\enter}.
     \item Ring up all of the items that you have picked. Check against the list as you are ringing them up to double check that you have the correct items and quantities.
     \item Once everything has been rung in, press \menu{Tender}, a receipt will print.
     \item Log back into the POS screen and press \menu{All Sales}, then press \menu{Reprint Invoice} and print the invoice to the \textit{Front Counter Printer}

@@ -1,0 +1,42 @@
+\title{Procedural Document Template}
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx, subcaption, amsmath, xcolor, geometry, fontspec, atbegshi}
+\geometry{margin=1.0in}
+\usepackage[os=win]{menukeys}
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+\newfontfamily\headingfont{Gill-Sans-MT-Condensed}[
+    Path = ./fonts/,
+    Extension = .TTF,
+    UprightFont=*,
+    Scale = 3
+]
+\let\Huge\headingfont
+
+\begin{document}
+\begin{titlepage}
+	\begin{minipage}[t]{1\columnwidth}
+		\begin{flushright}
+       	\vspace{-0.6in}
+       	\includegraphics[width=0.3\textwidth]{MonextraNew.png}
+			\vspace{0.5in}
+		\par\end{flushright}
+	\end{minipage}
+
+	\begin{center}
+		{\Huge Document Title}
+	\end{center}
+	\vspace{2em}
+	\noindent
+	\textbf{Created:} January 5, 2024
+	\hfill
+	\textbf{Updated:} \today
+	\\\\\indent
+	Description of document
+	
+	\tableofcontents
+\end{titlepage}
+
+
+
+\end{document}

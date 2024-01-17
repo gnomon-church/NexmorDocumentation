@@ -2,42 +2,40 @@
 \usepackage{graphicx, subcaption, amsmath, xcolor, pdfpages, geometry, fontspec, titlesec, titling}
 \geometry{margin=1.0in}
 \usepackage[os=win]{menukeys}
-\renewcommand{\thesection}{\hspace*{-1.0em}}
-\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
 \newfontfamily\headingfont{Gill-Sans-MT-Condensed}[
     Path = ./fonts/,
     Extension = .TTF,
-    UprightFont= *,
-    Scale = 2
+    UprightFont=*,
+    Scale = 3
 ]
-\renewcommand{\maketitlehooka}{\headingfont}
-
-\title{Closing Procedures}
-\preauthor{}
-\postauthor{}
-\author{}
-\predate{}
-\postdate{}
-\date{}
+\let\Huge\headingfont
 
 \begin{document}
+\begin{titlepage}
+	\begin{minipage}[t]{1\columnwidth}
+		\begin{flushright}
+       	\vspace{-0.6in}
+       	\includegraphics[width=0.3\textwidth]{MonextraNew.png}
+			\vspace{0.5in}
+		\par\end{flushright}
+	\end{minipage}
 
-\begin{minipage}[t]{1\columnwidth}%
-    \begin{flushright}
-        \vspace{-0.6in}
-        \includegraphics[width=0.3\textwidth]{MonextraNewCropped.png}
-        \vspace{0.5in}
-    \par\end{flushright}%
-\end{minipage}
-{\let\newpage\relax\maketitle}
-
-\noindent
-\textbf{Created:} January 8, 2024
-\hfill
-\textbf{Updated:} \today
-
-
-\tableofcontents
+	\begin{center}
+		{\Huge Processing BTS Booklists Through the POS System}
+	\end{center}
+	\vspace{2em}
+	\noindent
+	\textbf{Created:} January 8, 2024
+	\hfill
+	\textbf{Updated:} \today
+	\\\\\indent
+	
+	
+	\tableofcontents
+\end{titlepage}
 
 \newpage
 \section{Afternoon Tasks}
